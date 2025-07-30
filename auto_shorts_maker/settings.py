@@ -73,9 +73,17 @@ WSGI_APPLICATION = 'auto_shorts_maker.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'auto_shorts_maker',
+        'USER': 'sdw1000',
+        'PASSWORD': 'sdw1004',
+        'HOST': 'postgres',  # Docker 네트워크 상 컨테이너 이름
+        'PORT': '5432',
     }
 }
 
